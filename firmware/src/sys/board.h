@@ -19,14 +19,16 @@
 
 // LED
 #define GPIO_PORT_LED_STATUS    GPIOB
-#define GPIO_PIN_LED_STATUS     0
+#define GPIO_PIN_LED_STATUS     6
 
-#define GPIO_PORT_LED_CAN1      GPIOC
+#define GPIO_PORT_LED_CAN1      GPIOB
 #define GPIO_PIN_LED_CAN1       5
 
-#define GPIO_PORT_LED_CAN2      GPIOC
-#define GPIO_PIN_LED_CAN2       4
+#define GPIO_PORT_LED_CAN2      GPIOB
+#define GPIO_PIN_LED_CAN2       7
 
+#define GPIO_PORT_LAN_VCTL      GPIOA
+#define GPIO_PIN_LAN_VCTL       8
 /*
  * I/O ports initial setup, this configuration is established soon after reset
  * in the initialization code.
@@ -55,7 +57,7 @@
 #define VAL_GPIOACRH            0x888488b3      // 15..8
 #define VAL_GPIOAODR            0x00000000
 
-#define VAL_GPIOBCRL            0x88888882
+#define VAL_GPIOBCRL            0x22288882
 #define VAL_GPIOBCRH            0x8848FF88
 #define VAL_GPIOBODR            0x00000000
 

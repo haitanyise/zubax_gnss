@@ -18,6 +18,7 @@ void die(int error);
 
 void setCANLed(unsigned iface_index, bool state);
 void setStatusLed(bool state);
+void setLanVCTL(bool state);
 
 void enterBootloader();
 

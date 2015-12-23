@@ -50,6 +50,8 @@ void init()
 
     i2cStart(&I2CD2, &I2CCfg2);
 
+    setLanVCTL(true);
+
     while (true)
     {
         const int res = zubax_chibios::config::init();
@@ -99,6 +101,11 @@ void setCANLed(unsigned iface_index, bool state)
 void setStatusLed(bool state)
 {
     palWritePad(GPIO_PORT_LED_STATUS, GPIO_PIN_LED_STATUS, state);
+}
+
+void setLanVCTL(bool state)
+{
+    palWritePad(GPIO_PORT_LAN_VCTL, GPIO_PIN_LAN_VCTL, state);
 }
 
 void enterBootloader()
